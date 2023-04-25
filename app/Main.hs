@@ -1,6 +1,7 @@
 module Main (main) where
 
-import Lib
+import qualified CSS.Resolve.SimpleExample as CRS
 
 main :: IO ()
-main = someFunc
+main = do
+  CRS.example

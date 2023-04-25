@@ -25,7 +25,8 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      CSS.Resolve.Simple
+      CSS.Resolve.SimpleExample
   other-modules:
       Paths_css_selector_hs
   hs-source-dirs:
@@ -33,6 +34,9 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , containers
+    , extra
+    , mtl
   default-language: Haskell2010
 
 executable css-selector-hs-exe
@@ -44,7 +48,10 @@ executable css-selector-hs-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , containers
     , css-selector-hs
+    , extra
+    , mtl
   default-language: Haskell2010
 
 test-suite css-selector-hs-test
@@ -57,5 +64,8 @@ test-suite css-selector-hs-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , containers
     , css-selector-hs
+    , extra
+    , mtl
   default-language: Haskell2010
